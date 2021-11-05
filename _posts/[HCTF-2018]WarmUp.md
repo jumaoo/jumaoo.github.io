@@ -96,3 +96,10 @@ http://f047c895-2bc2-4d31-838f-a8f12e9bea1b.node4.buuoj.cn:81/index.php?file=hin
 
 注：关于为什么只需要跳过一次问号过滤和一次白名单过滤是因为从 $_page = mb_substr(，才开始真正的过滤输入的网址
 
+
+
+<!-- more -->
+
+Retorts have the "cap" and the "cucurbit" made into one. The anbik is also called the raʾs (head) of the cucurbit. The liquid in the cucurbit is heated or boiled; the vapour rises into the anbik, where it cools by contact with the walls and condenses, running down the spout into the receiver. A modern descendant of the alembic is the pot still, used to produce distilled beverages.
+
+_Originally from [Alembic - Wikipedia](https://en.wikipedia.org/wiki/Alembic)_
