@@ -3,7 +3,8 @@ title: [HCTF 2018]WarmUp
 categories:
 - General
 - External sources
-feature_image: "https://picsum.photos/2560/600?image=872"
+feature_text: |
+  [HCTF 2018]WarmUp
 
 ---
 
@@ -14,6 +15,8 @@ feature_image: "https://picsum.photos/2560/600?image=872"
 ### [HCTF 2018]WarmUp
 
 F12发现一个php文件被注释掉了
+
+<!-- more -->
 
 通过http://f047c895-2bc2-4d31-838f-a8f12e9bea1b.node4.buuoj.cn:81/source.php查看源代码:
 
@@ -98,8 +101,6 @@ http://f047c895-2bc2-4d31-838f-a8f12e9bea1b.node4.buuoj.cn:81/index.php?file=hin
 
 
 
-<!-- more -->
 
-Retorts have the "cap" and the "cucurbit" made into one. The anbik is also called the raʾs (head) of the cucurbit. The liquid in the cucurbit is heated or boiled; the vapour rises into the anbik, where it cools by contact with the walls and condenses, running down the spout into the receiver. A modern descendant of the alembic is the pot still, used to produce distilled beverages.
 
 _Originally from [Alembic - Wikipedia](https://en.wikipedia.org/wiki/Alembic)_
