@@ -10,13 +10,13 @@ feature_text: |
 
 
 
-### 2021.10.16
+2021.10.16
 
-### [HCTF 2018]WarmUp
 
-F12发现一个php文件被注释掉了
 
 <!-- more -->
+
+F12发现一个php文件被注释掉了
 
 通过http://f047c895-2bc2-4d31-838f-a8f12e9bea1b.node4.buuoj.cn:81/source.php查看源代码:
 
