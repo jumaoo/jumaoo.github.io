@@ -1,5 +1,5 @@
 ---
-title: Stonks Street Journal
+title: [Cyber Security Rumble]Stonks Street Journal
 categories:
 - General
 - External sources
@@ -64,3 +64,5 @@ def tamper(payload, **kwargs):    //kwargs就是字典中的key+value
 - --tamper：脚本
 - --threads：多线程
 - -T：表名
+
+得到flag
