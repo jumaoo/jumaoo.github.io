@@ -1,8 +1,7 @@
 ---
-title: [Cyber Security Rumble]Stonks Street Journal
+title: Stonks Street Journal
 categories:
-- General
-- External sources
+- wp
 feature_text: |
   Stonks Street Journal
 
@@ -10,6 +9,8 @@ feature_text: |
 ---
 
 
+
+2021.12.02 
 
 Stonks Street Journal
 
