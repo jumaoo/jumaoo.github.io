@@ -1,9 +1,9 @@
 ---
-title: PHP基础语法和函数
+title: JavaScript基础
 categories:
 - Notes
 feature_text: |
-  PHP基础语法和函数
+  JavaScript基础
 
 
 
@@ -11,10 +11,6 @@ feature_text: |
 ---
 
 
-
-2022.02.15
-
-JavaScript基础
 
 
 
