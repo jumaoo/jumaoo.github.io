@@ -1,5 +1,5 @@
 ---
-title: About Jumaoo
+title: About 🍊🐱
 feature_text: |
   ## Jumaoo's Blog
   🍊🐱
@@ -8,3 +8,10 @@ excerpt: "Jumaoo is a starting point for [Jekyll](https://jekyllrb.com/) project
 
 ---
 
+
+
+
+
+<!-- more-->
+
+## （此处应该是不重要的自我介绍）
