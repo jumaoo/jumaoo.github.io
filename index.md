@@ -1,5 +1,5 @@
 ---
-title: About 🍊🐱
+title: About me
 feature_text: |
   ## Jumaoo's Blog
   🍊🐱
