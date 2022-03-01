@@ -6,8 +6,6 @@ feature_text: |
   JavaScript基础
 
 
-
-
 ---
 
 

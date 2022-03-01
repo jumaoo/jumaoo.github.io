@@ -10,10 +10,6 @@ feature_text: |
 
 
 
-2021.12.02 
-
-Stonks Street Journal
-
 
 
 <!-- more -->
