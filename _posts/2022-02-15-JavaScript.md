@@ -22,7 +22,7 @@ feature_text: |
 
 ##### 2 3种方式添加JavaScript
 
-![image-20220209095851868](C:\Users\PHY\AppData\Roaming\Typora\typora-user-images\image-20220209095851868.png)
+![image-20220209095851868](D:\a-Blue-Whale\jumaoo.github.io\_posts\photo\image-20220209095851868.png)
 
 ##### 3 标记
 
