@@ -84,7 +84,7 @@ console.log("hello,world".toUpperCase());
 
 - for遍历和let in遍历
 
-  ![image-20220209112322722](assets/pic/image-20220209112322722.png)![image-20220209112341072](assets/pic/image-20220209112341072.png)
+  ![image-20220209112322722](/assets/pic/image-20220209112322722.png)![image-20220209112341072](/assets/pic/image-20220209112341072.png)
 
   ```javascript
   for (let i in a){
