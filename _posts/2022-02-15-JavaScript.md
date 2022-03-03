@@ -22,7 +22,7 @@ feature_text: |
 
 ##### 2 3种方式添加JavaScript
 
-![image-20220209095851868](assets/pic/image-20220209095851868.png" | absolute_url }})
+![image-20220209095851868](/assets/pic/image-20220209095851868.png)
 
 ##### 3 标记
 
