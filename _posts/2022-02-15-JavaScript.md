@@ -22,7 +22,7 @@ feature_text: |
 
 ##### 2 3种方式添加JavaScript
 
-![image-20220209095851868](.\2022-02-15-JavaScript\image-20220209095851868.png)
+![image-20220209095851868](.\JavaScript基础\image-20220209095851868.png)
 
 ##### 3 标记
 
