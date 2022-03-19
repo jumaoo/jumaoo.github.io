@@ -18,6 +18,8 @@ feature_text: |
 
 ### Stonks Street Journal
 
+test!
+
 在网站成功注册后可以查看 `invoice`
 
 查看时发现URL末尾有一串看起来像base64编码的字符串
